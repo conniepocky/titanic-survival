@@ -59,7 +59,7 @@ df = pd.DataFrame(data, columns=["Demographic", "Survival Rate"])
 plots = sns.barplot(x="Demographic", y="Survival Rate", data=df, palette=sns.color_palette(colours))
  
 for bar in plots.patches:
-    plots.annotate(format(bar.get_height(), ".2f"), 
+    plots.annotate(format(bar.get_height(), ".2f")+"%", 
                    (bar.get_x() + bar.get_width() / 2, 
                     bar.get_height()), ha="center", va="center",
                    size=9, xytext=(0, 8),
